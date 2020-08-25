@@ -4,7 +4,7 @@ python:
   - "3.8"
 
 script:
-- pytest  --cov-report term --cov=app/test/
+- pytest --cov-report term-missing --cov=python_test tests/
 
 after_success:
 - codecov
