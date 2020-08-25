@@ -3,6 +3,11 @@ python:
   - "3.7"
   - "3.8"
 
-# command to run tests
 script:
-  - pytest
+- pytest  --cov-report term --cov=app/test/
+
+env:
+- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
+
+after_success:
+- codecov
